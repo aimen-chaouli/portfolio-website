@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <nav class="bg-black">
+      <ul class="flex justify-center space-x-8 py-4">
+        <li>
+          <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="text-gray-400 hover:text-white">Resume</a>
+        </li>
+        <li>
+          <a href="contact.html" class="text-gray-400 hover:text-white"
+            >Contact</a
+          >
+        </li>
+        <li>
+          <a href="projects.html" class="text-gray-400 hover:text-white"
+            >Projects</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="flex-1 bg-gradient-to-b min-h-screen from-gray-800 to-black opacity-100">
+      <div class="mx-auto mt-12 text-center">
+        <!-- Circular image container -->
+        <div class="w-48 h-48 mx-auto overflow-hidden rounded-full">
+          <img
+            src="img/DSC_0212.JPG"
+            alt="Profile Picture"
+            class="object-cover w-full h-full" />
+        </div>
+        <h1 class="text-white text-6xl mt-8">I'm Aimen.</h1>
+        <h2 class="text-white text-2xl mt-4">A Software Developer.</h2>
+        <p class="text-gray-400 mt-4">
+          This portfolio showcases my development experience, methods, and
+          <br />
+          outcomes in crafting exceptional user interfaces.
+        </p>
+        <button class="text-white mt-10 border rounded-full py-3 px-6">
+          Show Work
+        </button>
+        <svg
+          class="w-6 h-6 mt-4 text-white mx-auto animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="min-h-screen py-16 bg-white text-gray-900">
+      <div class="max-w-5xl mx-auto px-4">
+        <!-- Heading & Intro Text -->
+        <h2 class="text-4xl font-bold text-center mb-6">
+          Value in the lives of others.
+        </h2>
+        <p class="text-center text-lg text-gray-600 mb-10">
+          I am driven by a desire to improve the lives of others. My passion
+          lies in enhancing user experiences and leading projects towards
+          positive outcomes. I believe in a human-centered approach that unlocks
+          business value by providing genuine customer value.
+        </p>
+
+        <!-- Three-Column Layout -->
+        <div
+          class="flex flex-col md:flex-row justify-center py-20 items-start text-center space-y-8 md:space-y-0 md:space-x-16">
+          <!-- Column 1 -->
+          <div class="md:w-1/3">
+            <h3 class="text-3xl text-left font-semibold mb-2">Work</h3>
+            <p class="text-gray-600 text-justify">
+              I am a designer who uses design tools to effectively communicate
+              ideas and desired outcomes to achieve a shared understanding.
+              Collaboration is key to my work, and I am an active listener who
+              bridges diverse disciplines to achieve the best possible outcome.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="md:w-1/3">
+            <h3 class="text-3xl font-semibold text-left mb-2">Strategy</h3>
+            <p class="text-gray-600 text-justify">
+              Design is a vital business tool that allows us to proactively and
+              continually learn about our users' behavior, needs, and
+              expectations. I strongly believe in an iterative approach—testing
+              early and often—ensuring we produce solutions that genuinely
+              benefit users.
+            </p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="md:w-1/3">
+            <h3 class="text-3xl text-left font-semibold mb-2">Leadership</h3>
+            <p class="text-gray-600 text-justify">
+              In my experience, leadership starts from the bottom up. The same
+              goes for learning—I'm committed to helping others succeed by
+              mentoring them toward their full potential. When we encourage and
+              help our peers grow, we all benefit and contribute at our best.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="min-h-screen bg-black text-gray-400 pt-16 p-10">
+      <h2 class="text-4xl font-bold text-center mb-10">
+        I’ve worked as an
+        <span class="text-white">IT Engineer</span> and
+        <span class="text-white">Network Administrator</span>
+        roles for:
+      </h2>
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 pt-16">
+        <!-- Work Items -->
+        <div
+          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-start flex flex-col justify-between min-h-[300px]">
+          <img
+            src="img/epsp.png"
+            alt="Établissement Public de Santé Logo"
+            class="h-16 mx-auto mb-4" />
+          <h3 class="text-3xl font-semibold text-white text-center">
+            Établissement Public de Santé
+          </h3>
+          <p class="text-gray-400 pt-6 text-xl text-center">IT Engineer</p>
+          <p class="text-gray-500 mt-2 text-center">
+            Public Healthcare Institution
+          </p>
+        </div>
+
+        <div
+          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-start flex flex-col justify-between min-h-[300px]">
+          <img
+            src="img/download.svg"
+            alt="Clinique Les Jasmins Logo"
+            class="h-16 mx-auto mb-4" />
+          <h3 class="text-3xl font-semibold text-white text-center">
+            Clinique Les Jasmins
+          </h3>
+          <p class="text-gray-400 pt-6 text-xl text-center">Area Design Lead</p>
+          <p class="text-gray-500 mt-2 text-center">
+            Private Healthcare Clinic
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
