@@ -73,3 +73,38 @@ function downloadPDF() {
   // Open link in a new tab
   window.open(gdriveURL, "_blank");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector("#carousel-section");
+  if (!carousel) return;
+
+  const slidesContainer = carousel.querySelector(".carousel-slides");
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  const prevButton = carousel.querySelector(".carousel-button.prev");
+  const nextButton = carousel.querySelector(".carousel-button.next");
+
+  if (!slidesContainer || !prevButton || !nextButton || slides.length === 0) {
+    console.error("Carousel elements not found.");
+    return;
+  }
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    slidesContainer.style.transform = `translateX(${offset}%)`;
+  }
+
+  nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  });
+
+  prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+
+  updateCarousel(); // Initialize
+});
