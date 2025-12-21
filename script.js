@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function downloadPDF() {
   // Replace with your actual FILE_ID from Google Drive
   const fileID = "Resume";
-  const gdriveURL = `https://drive.google.com/file/d/1xQttYBz6n3_34RKx-EkC8pEGwIxru3fF/view?usp=sharing`;
+  const gdriveURL = `https://drive.google.com/file/d/1H67gsSPizUS6ilr0BzFZMu9VB8XTiMTo/view?usp=sharing`;
 
   // Open link in a new tab
   window.open(gdriveURL, "_blank");
