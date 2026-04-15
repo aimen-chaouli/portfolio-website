@@ -51,6 +51,7 @@
     </style>
   </head>
   <body class="min-h-screen flex flex-col bg-gray-100 font-inter">
+    <!-- Navigation -->
     <nav class="bg-black">
       <ul class="flex justify-center space-x-8 py-4">
         <li>
@@ -69,178 +70,105 @@
       </ul>
     </nav>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex-grow">
-      <div class="text-center mb-16">
-        <h2
-          class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 mb-4">
-          Selected Works
-        </h2>
-        <div class="w-16 h-1 bg-indigo-600 mx-auto rounded-full mb-4"></div>
-        <p class="text-gray-500 max-w-2xl mx-auto text-lg">
-          A collection of my latest web development projects.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <article
-          class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-          <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+    <!-- Projects -->
+    <section class="max-w-7xl mx-auto px-4 py-16 flex-grow">
+      <h2
+        class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800">
+        My Latest Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 flex flex-col overflow-hidden">
+          <div class="h-48 sm:h-64 w-full overflow-hidden">
             <img
               src="img/Website.png"
-              alt="The Clinic Website"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              alt="The Clinic Website Placeholder"
+              class="w-full h-full object-cover" />
           </div>
-          <div class="p-8 flex flex-col flex-grow">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">
               The Clinic Website
             </h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-              Developed a modern, responsive clinic website to establish a
-              robust online presence. The site features intuitive navigation,
-              comprehensive service details, and a sleek design, ensuring
-              patients can easily access the clinic's information and services.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="project-website.html"
-                class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors group/link">
-                View Project
-                <svg
-                  class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+            <div class="h-48 overflow-auto mb-4 flex-grow">
+              <p class="text-gray-600 text-base break-words">
+                Developed a modern, responsive clinic website to establish a
+                robust online presence. The site features intuitive navigation,
+                comprehensive service details, and a sleek design, ensuring
+                patients can easily access the clinic's information and
+                services.
+              </p>
             </div>
+            <a
+              href="project-website.html"
+              class="mt-auto text-indigo-600 hover:text-indigo-800 font-medium self-start"
+              >Learn More &rarr;</a
+            >
           </div>
-        </article>
+        </div>
 
-        <article
-          class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-          <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+        <div
+          class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 flex flex-col overflow-hidden">
+          <div class="h-48 sm:h-64 w-full overflow-hidden">
             <img
               src="img/Pharmacy.png"
-              alt="Pharmacy Management System"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              alt="Pharmacy Management System Placeholder"
+              class="w-full h-full object-cover" />
           </div>
-          <div class="p-8 flex flex-col flex-grow">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">
               Pharmacy Management System
             </h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-              Developed a cutting-edge pharmacy web application designed to
-              streamline management and optimize stock inventory. The
-              application features a user-friendly interface, real-time
-              inventory tracking, and robust security measures.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="#"
-                class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors group/link">
-                View Project
-                <svg
-                  class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+            <div class="h-48 overflow-auto mb-4 flex-grow">
+              <p class="text-gray-600 text-base break-words">
+                Developed a cutting-edge pharmacy web application designed to
+                streamline management and optimize stock inventory. The
+                application features a user-friendly interface, real-time
+                inventory tracking, and robust security measures, enabling
+                efficient prescription management and seamless operations.
+              </p>
             </div>
+            <a
+              href="#"
+              class="mt-auto text-indigo-600 hover:text-indigo-800 font-medium self-start"
+              >Learn More &rarr;</a
+            >
           </div>
-        </article>
+        </div>
 
-        <article
-          class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-          <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+        <div
+          class="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300 flex flex-col overflow-hidden">
+          <div class="h-48 sm:h-64 w-full overflow-hidden">
             <img
               src="img/absenceDSS.png"
-              alt="Clinic Staff Absence System"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              alt="Clinic Staff Absence System Placeholder"
+              class="w-full h-full object-cover" />
           </div>
-          <div class="p-8 flex flex-col flex-grow">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">
-              Absence Management System
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">
+              Clinic Staff Absence & Coverage Management System
             </h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-              Developed a dynamic web application designed to streamline clinic
-              staff absence management and ensure continuous service coverage.
-              Features intuitive absence recording, a central dashboard, and
-              automated reporting.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="project-absence.html"
-                class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors group/link">
-                View Project
-                <svg
-                  class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
+            <div class="h-48 overflow-auto mb-4 flex-grow">
+              <p class="text-gray-600 text-base break-words">
+                Developed a dynamic web application designed to streamline
+                clinic staff absence management and ensure continuous service
+                coverage. The system features intuitive absence/coverage
+                recording, a central dashboard with key statistics, searchable
+                personnel history, and automated weekly reporting, enabling
+                efficient staff coordination and optimized operational
+                continuity.
+              </p>
             </div>
+            <a
+              href="project-absence.html"
+              class="mt-auto text-indigo-600 hover:text-indigo-800 font-medium self-start"
+              >Learn More &rarr;</a
+            >
           </div>
-        </article>
-
-        <article
-          class="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-          <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-            <img
-              src="img/POS.png"
-              alt="Point of Sale (POS) System"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          </div>
-          <div class="p-8 flex flex-col flex-grow">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">
-              Point of Sale (POS) System
-            </h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-              Developed a comprehensive, cross-platform POS system featuring a
-              responsive Flutter frontend. The robust backend architecture
-              leverages Django alongside Node.js and Prisma, ensuring highly
-              efficient database management, secure transactions, and real-time
-              synchronization.
-            </p>
-            <div class="mt-auto">
-              <a
-                href="#"
-                class="inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors group/link">
-                View Project
-                <svg
-                  class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
     </section>
 
+    <!-- Technologies -->
     <section class="w-full py-16 bg-gray-200">
       <h2
         class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-800">
@@ -279,10 +207,6 @@
                   <i class="devicon devicon-bootstrap-plain colored"></i>
                   <h1 class="mt-2">Bootstrap</h1>
                 </th>
-                <th class="border border-gray-400 px-3 py-3">
-                  <i class="devicon devicon-flutter-plain colored"></i>
-                  <h1 class="mt-2">Flutter</h1>
-                </th>
               </tr>
             </thead>
           </table>
@@ -314,14 +238,6 @@
                 <th class="border border-gray-400 px-3 py-3">
                   <i class="devicon devicon-php-plain colored"></i>
                   <h1 class="mt-2">PHP</h1>
-                </th>
-                <th class="border border-gray-400 px-3 py-3">
-                  <i class="devicon devicon-django-plain colored"></i>
-                  <h1 class="mt-2">Django</h1>
-                </th>
-                <th class="border border-gray-400 px-3 py-3">
-                  <i class="devicon devicon-prisma-original colored"></i>
-                  <h1 class="mt-2">Prisma</h1>
                 </th>
               </tr>
             </thead>
