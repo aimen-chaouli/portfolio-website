@@ -7,6 +7,7 @@ module.exports = {
     "projects.html",
     "project-absence.html",
     "project-website.html",
+    "project-pos.html",
   ],
   theme: {
     extend: {},
