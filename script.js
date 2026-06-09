@@ -1,13 +1,9 @@
-const RESUME_URL =
-  "https://drive.google.com/file/d/1H67gsSPizUS6ilr0BzFZMu9VB8XTiMTo/view?usp=sharing";
-
 const prefersReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)"
 ).matches;
 
 document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
-  initResumeButtons();
   initScrollReveal();
   initCarousel();
 });
@@ -47,18 +43,6 @@ function initMobileMenu() {
   // Close the menu when resizing up to desktop.
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) closeMenu();
-  });
-}
-
-/* -------------------------------------------------------------------------- */
-/* Resume / CV buttons                                                        */
-/* -------------------------------------------------------------------------- */
-function initResumeButtons() {
-  document.querySelectorAll("#resume-btn, .resume-btn").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      event.preventDefault();
-      window.open(RESUME_URL, "_blank", "noopener");
-    });
   });
 }
 
