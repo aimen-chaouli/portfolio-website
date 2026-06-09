@@ -11,114 +11,200 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-Z2BS6ZRB7T");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact — Aimen Chaouli</title>
+    <meta
+      name="description"
+      content="Get in touch with Aimen Chaouli via email, phone, GitHub, or LinkedIn." />
+    <meta name="author" content="Aimen Chaouli" />
+    <link rel="canonical" href="https://aimen-chaouli.com/contact.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aimen-chaouli.com/contact.html" />
+    <meta property="og:title" content="Contact — Aimen Chaouli" />
+    <meta
+      property="og:description"
+      content="Get in touch with Aimen Chaouli." />
+    <meta property="og:image" content="https://aimen-chaouli.com/img/DSC_0212.JPG" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/jpeg" href="img/DSC_0212.JPG" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="src/output.css" />
-    <title>Contact - Aimen Chaouli</title>
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-100">
-    <!-- Navigation -->
-    <nav class="bg-black">
-      <ul class="flex justify-center space-x-8 py-4">
-        <li>
-          <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
-        </li>
+  <body class="min-h-screen flex flex-col bg-ink-950 text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md"
+      >Skip to content</a
+    >
 
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-40 bg-ink-950/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white"
+          >Aimen<span class="text-accent">.</span></a
+        >
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link-active">Contact</a></li>
+        </ul>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-1 px-6 pb-4 border-t border-white/10">
+        <li><a href="index.html" class="block py-2 nav-link">Home</a></li>
+        <li><a href="projects.html" class="block py-2 nav-link">Projects</a></li>
         <li>
-          <a href="contact.html" class="text-white hover:text-gray-300"
-            >Contact</a
-          >
-        </li>
-        <li>
-          <a href="projects.html" class="text-gray-400 hover:text-white"
-            >Projects</a
-          >
+          <a href="contact.html" class="block py-2 nav-link-active">Contact</a>
         </li>
       </ul>
     </nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="min-h-screen bg-black text-gray-400 pt-5 p-10">
-      <h2 class="text-4xl font-bold text-center mb-10 text-white">
-        Get in touch
-      </h2>
+    <main id="main" class="flex-1">
+      <section class="max-w-5xl mx-auto px-6 py-20 w-full">
+        <div class="text-center mb-16">
+          <p
+            class="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
+            Contact
+          </p>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            Get in touch
+          </h1>
+          <p class="text-lg text-gray-400 max-w-xl mx-auto leading-relaxed">
+            Have a project in mind or just want to say hello? I'd love to hear
+            from you. Reach out through any of the channels below.
+          </p>
+        </div>
 
-      <!-- Row 1: Email & Phone (same height) -->
-      <div
-        class="flex flex-col md:flex-row justify-center items-stretch gap-10 md:gap-24 pt-5">
-        <!-- Email Card -->
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-center flex flex-col justify-between flex-1">
-          <i
-            class="fa-solid fa-envelope text-blue-400 text-6xl mb-4"
-            aria-hidden="true"></i>
-          <h3 class="text-2xl font-semibold text-white mb-2">Email</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Email -->
           <a
             href="mailto:aimen.chaouli@outlook.com"
-            class="text-blue-400 hover:text-white text-xl">
-            aimen.chaouli@outlook.com
+            class="group reveal bg-ink-900 border border-white/5 p-8 rounded-2xl flex items-center gap-5 hover:border-accent/40 transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-ink-950 transition-colors">
+              <i class="fa-solid fa-envelope text-2xl" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm text-gray-500 mb-1">Email</span>
+              <span class="block text-lg font-medium text-white truncate"
+                >aimen.chaouli@outlook.com</span
+              >
+            </span>
           </a>
-        </div>
 
-        <!-- Phone Card -->
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-center flex flex-col justify-between flex-1">
-          <i
-            class="fa-solid fa-phone text-blue-400 text-6xl mb-4"
-            aria-hidden="true"></i>
-          <h3 class="text-2xl font-semibold text-white mb-2">Phone</h3>
+          <!-- Phone -->
           <a
             href="tel:+13433509165"
-            class="text-blue-400 hover:text-white text-xl">
-            +1 (343)-350-9165
+            class="group reveal bg-ink-900 border border-white/5 p-8 rounded-2xl flex items-center gap-5 hover:border-accent/40 transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-ink-950 transition-colors">
+              <i class="fa-solid fa-phone text-2xl" aria-hidden="true"></i>
+            </span>
+            <span>
+              <span class="block text-sm text-gray-500 mb-1">Phone</span>
+              <span class="block text-lg font-medium text-white"
+                >+1 (343) 350-9165</span
+              >
+            </span>
           </a>
-        </div>
-      </div>
 
-      <!-- Row 2: GitHub & LinkedIn (optional) -->
-      <div
-        class="flex flex-col md:flex-row justify-center items-stretch gap-10 md:gap-24 pt-16">
-        <!-- GitHub Card -->
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-center flex flex-col justify-between flex-1">
-          <i
-            class="fa-brands fa-github text-blue-400 text-6xl mb-4"
-            aria-hidden="true"></i>
-          <h3 class="text-2xl font-semibold text-white mb-2">GitHub</h3>
+          <!-- GitHub -->
           <a
             href="https://github.com/aimen-chaouli"
             target="_blank"
-            class="text-blue-400 hover:text-white text-xl">
-            Connect with me
+            rel="noopener"
+            class="group reveal bg-ink-900 border border-white/5 p-8 rounded-2xl flex items-center gap-5 hover:border-accent/40 transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-ink-950 transition-colors">
+              <i class="fa-brands fa-github text-2xl" aria-hidden="true"></i>
+            </span>
+            <span>
+              <span class="block text-sm text-gray-500 mb-1">GitHub</span>
+              <span class="block text-lg font-medium text-white"
+                >@aimen-chaouli</span
+              >
+            </span>
           </a>
-        </div>
 
-        <!-- LinkedIn Card -->
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-center flex flex-col justify-between flex-1">
-          <i
-            class="fa-brands fa-linkedin text-blue-400 text-6xl mb-4"
-            aria-hidden="true"></i>
-          <h3 class="text-2xl font-semibold text-white mb-2">LinkedIn</h3>
+          <!-- LinkedIn -->
           <a
             href="https://www.linkedin.com/in/aimenchaouli"
             target="_blank"
-            class="text-blue-400 hover:text-white text-xl">
-            Connect with me
+            rel="noopener"
+            class="group reveal bg-ink-900 border border-white/5 p-8 rounded-2xl flex items-center gap-5 hover:border-accent/40 transition-all duration-300">
+            <span
+              class="flex-shrink-0 w-14 h-14 rounded-xl bg-accent/10 text-accent flex items-center justify-center group-hover:bg-accent group-hover:text-ink-950 transition-colors">
+              <i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i>
+            </span>
+            <span>
+              <span class="block text-sm text-gray-500 mb-1">LinkedIn</span>
+              <span class="block text-lg font-medium text-white"
+                >in/aimenchaouli</span
+              >
+            </span>
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="bg-black text-center py-4 text-gray-400">
-      &copy; 2026 Aimen Chaouli. All rights reserved.
+    <footer class="bg-ink-950 border-t border-white/10 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Aimen Chaouli. All rights reserved.
+        </p>
+        <div class="flex items-center gap-5 text-gray-500">
+          <a
+            href="https://github.com/aimen-chaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aimenchaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:aimen.chaouli@outlook.com"
+            aria-label="Email"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -16,17 +16,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>Staff Coverage System — Aimen Chaouli</title>
+    <meta
+      name="description"
+      content="Case study: a clinic staff absence and coverage management system with automated weekly PDF reports, built by Aimen Chaouli." />
+    <meta name="author" content="Aimen Chaouli" />
+    <link rel="canonical" href="https://aimen-chaouli.com/project-absence.html" />
 
-    <link rel="stylesheet" href="src/output.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Staff Coverage System — Aimen Chaouli" />
+    <meta property="og:image" content="https://aimen-chaouli.com/img/absenceDSS.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Project: Clinic Staff Absence System - Aimen Chaouli</title>
+    <link rel="icon" type="image/jpeg" href="img/DSC_0212.JPG" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,128 +36,147 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="src/output.css" />
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-50 font-inter text-gray-800">
-    <nav class="bg-black shadow-md">
-      <ul class="flex justify-center space-x-8 py-4">
-        <li>
-          <a
-            href="index.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Home</a
-          >
-        </li>
+  <body class="min-h-screen flex flex-col bg-ink-950 text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md"
+      >Skip to content</a
+    >
 
+    <nav
+      class="sticky top-0 z-40 bg-ink-950/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white"
+          >Aimen<span class="text-accent">.</span></a
+        >
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="projects.html" class="nav-link-active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-1 px-6 pb-4 border-t border-white/10">
+        <li><a href="index.html" class="block py-2 nav-link">Home</a></li>
         <li>
-          <a
-            href="contact.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Contact</a
-          >
+          <a href="projects.html" class="block py-2 nav-link-active">Projects</a>
         </li>
-        <li>
-          <a
-            href="projects.html"
-            class="text-white hover:text-gray-300 transition-colors duration-200"
-            >Projects</a
-          >
-        </li>
+        <li><a href="contact.html" class="block py-2 nav-link">Contact</a></li>
       </ul>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-4 py-12 sm:py-12 flex-grow w-full">
+    <main id="main" class="max-w-5xl mx-auto px-6 py-12 flex-grow w-full">
       <article>
+        <a
+          href="projects.html"
+          class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-accent transition-colors mt-6 mb-8">
+          <i class="fa-solid fa-arrow-left text-xs"></i> Back to projects
+        </a>
         <h1
-          class="text-3xl sm:text-4xl text-center font-extrabold text-gray-900 mt-12 mb-20">
-          Clinic Staff Absence & Coverage Management System
+          class="text-3xl sm:text-5xl text-center font-extrabold tracking-tight mt-6 mb-16">
+          Clinic Staff Absence &amp; Coverage System
         </h1>
         <section
           id="carousel-section"
           class="mb-12 flex items-center justify-center gap-2 sm:gap-4">
           <button
-            class="carousel-button carousel-nav-button prev flex-shrink-0 bg-gray-300 hover:bg-gray-400 text-gray-600 hover:text-gray-900 border border-gray-300 shadow-sm p-3 rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-10 h-10">
-            <img
-              src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/chevron-left.svg"
-              alt="Previous"
-              class="w-14 h-14" />
+            aria-label="Previous slide"
+            class="carousel-button carousel-nav-button prev flex-shrink-0 bg-ink-900 hover:bg-accent text-white hover:text-ink-950 border border-white/10 shadow-sm rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-11 h-11">
+            <i class="fa-solid fa-chevron-left"></i>
           </button>
 
-          <div class="flex-grow overflow-hidden rounded-lg shadow-md">
+          <div class="flex-grow overflow-hidden rounded-2xl shadow-xl border border-white/10">
             <div
               class="carousel-slides flex transition-transform duration-500 ease-in-out">
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/absenceDSS.png"
-                  alt="The Clinic Website - Homepage"
+                  alt="Staff coverage system dashboard overview"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 1.webp"
-                  alt="The Clinic Website - Services Page"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 2.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 3.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 4.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 5.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 6.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
               <div class="carousel-slide w-full flex-shrink-0">
                 <img
                   src="img/project-absence/page 7.webp"
-                  alt="The Clinic Website - Contact Form"
+                  alt="Staff coverage system interface"
+                  loading="lazy"
                   class="block w-full object-cover aspect-video" />
               </div>
             </div>
           </div>
 
           <button
-            class="carousel-button carousel-nav-button next flex-shrink-0 bg-gray-300 hover:bg-gray-400 text-gray-600 hover:text-gray-900 border border-gray-300 shadow-sm p-3 rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-10 h-10">
-            <img
-              src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/chevron-right.svg"
-              alt="Next"
-              class="w-5 h-5" />
+            aria-label="Next slide"
+            class="carousel-button carousel-nav-button next flex-shrink-0 bg-ink-900 hover:bg-accent text-white hover:text-ink-950 border border-white/10 shadow-sm rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-11 h-11">
+            <i class="fa-solid fa-chevron-right"></i>
           </button>
         </section>
 
-        <section class="mb-12 mt-24">
+        <section class="mb-12 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Project Overview
           </h2>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             Built a dynamic web application to simplify clinic staff absence
             tracking and maintain consistent service coverage. The platform
             includes user-friendly tools for logging absences and managing
@@ -166,42 +187,41 @@
           </p>
         </section>
 
-        <section class="mb-12 mt-24">
+        <section class="mb-12 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Technologies Used
           </h2>
           <div class="flex flex-wrap gap-2">
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-blue-100 text-blue-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >HTML5</span
             >
-
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-pink-100 text-pink-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >PHP</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-yellow-100 text-yellow-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >JavaScript</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-orange-100 text-orange-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >MySQL</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-red-100 text-red-800"
-              >BootStrap</span
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
+              >Bootstrap</span
             >
           </div>
         </section>
 
-        <section class="mb-2 mt-24">
+        <section class="mb-4 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Key Features
           </h2>
-          <ul class="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed">
+          <ul class="list-disc pl-6 space-y-2 text-gray-400 leading-relaxed">
             <li>
               Effortless Absence & Coverage Management – Easily log staff
               absences and arrange coverage through an intuitive interface.
@@ -224,11 +244,121 @@
             </li>
           </ul>
         </section>
+
+        <section class="mb-4 mt-20">
+          <h2
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
+            Challenges &amp; Solutions
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            This system replaced a paper-and-spreadsheet routine that clinic
+            staff relied on every single day, so it couldn&rsquo;t just work
+            &mdash; it had to be more dependable than the habit it was replacing.
+            That bar is what made the hard parts genuinely hard.
+          </p>
+
+          <div class="space-y-6">
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Preventing impossible coverage assignments
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                The first version happily let someone be assigned as cover while
+                they were themselves marked absent, or double-booked across two
+                shifts at once &mdash; small logic gaps that would have caused
+                real scheduling chaos. I mapped out every conflicting case and
+                pushed the rules down into the data layer.
+                <span class="text-gray-300"
+                  >Before any assignment is saved, the system checks the
+                  person&rsquo;s existing absences and shifts in the same query
+                  path, so a conflicting record simply cannot be written.</span
+                >
+                Moving the guarantees close to the database, instead of trusting
+                the form, is the lesson that stuck: validation in the UI is for
+                convenience, validation at the data layer is for correctness.
+              </p>
+            </div>
+
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Turning months of records into a readable PDF report
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Management wanted a clean weekly summary they could print and
+                hand around, but my early reports broke across page edges and
+                turned into a wall of numbers. I rebuilt the report generation to
+                aggregate the week&rsquo;s data server-side first, then render it
+                into structured, paginated tables.
+                <span class="text-gray-300"
+                  >The output became a tidy, printable document with proper
+                  headers and totals &mdash; something a manager could actually
+                  use in a meeting without me explaining it.</span
+                >
+                It taught me that &ldquo;export to PDF&rdquo; is really a data
+                shaping problem first and a formatting problem second.
+              </p>
+            </div>
+
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Keeping search fast as history grew
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                The searchable personnel history felt instant with a handful of
+                test records and noticeably slower once it held a realistic
+                amount of real data. Instead of guessing, I looked at how the
+                queries were actually running and reworked them &mdash; indexing
+                the columns staff search by and only loading the records a page
+                actually shows.
+                <span class="text-gray-300"
+                  >Search stayed responsive even as the history kept growing,
+                  because the database does the heavy filtering instead of
+                  pulling everything into memory.</span
+                >
+                It was my first real encounter with the idea that code which is
+                &ldquo;fast enough&rdquo; on test data can quietly fail at
+                scale.
+              </p>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
 
-    <footer class="bg-black text-center py-6 text-gray-400 text-sm">
-      © 2026 Aimen Chaouli. All rights reserved.
+    <footer class="bg-ink-950 border-t border-white/10 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Aimen Chaouli. All rights reserved.
+        </p>
+        <div class="flex items-center gap-5 text-gray-500">
+          <a
+            href="https://github.com/aimen-chaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aimenchaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:aimen.chaouli@outlook.com"
+            aria-label="Email"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>

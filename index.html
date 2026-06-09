@@ -11,189 +11,324 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-Z2BS6ZRB7T");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>Aimen Chaouli — Software Developer</title>
+    <meta
+      name="description"
+      content="Aimen Chaouli is a software developer building scalable, user-centered web and desktop applications. Explore selected projects and get in touch." />
+    <meta name="author" content="Aimen Chaouli" />
+    <link rel="canonical" href="https://aimen-chaouli.com/" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aimen-chaouli.com/" />
+    <meta property="og:title" content="Aimen Chaouli — Software Developer" />
+    <meta
+      property="og:description"
+      content="Software developer building scalable, user-centered web and desktop applications." />
+    <meta property="og:image" content="https://aimen-chaouli.com/img/DSC_0212.JPG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aimen Chaouli — Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Software developer building scalable, user-centered web and desktop applications." />
+    <meta name="twitter:image" content="https://aimen-chaouli.com/img/DSC_0212.JPG" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/DSC_0212.JPG" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="src/output.css" />
-    <title>Aimen Chaouli</title>
   </head>
-  <body class="min-h-screen flex flex-col">
-    <nav class="bg-black">
-      <ul class="flex justify-center space-x-8 py-4">
-        <li>
-          <a href="index.html" class="text-white hover:text-gray-300">Home</a>
-        </li>
-        <li>
-          <a href="contact.html" class="text-gray-400 hover:text-white"
-            >Contact</a
-          >
-        </li>
-        <li>
-          <a href="projects.html" class="text-gray-400 hover:text-white"
-            >Projects</a
-          >
-        </li>
+  <body class="min-h-screen flex flex-col bg-ink-950 text-white antialiased">
+    <!-- Skip link for accessibility -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md"
+      >Skip to content</a
+    >
+
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-40 bg-ink-950/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white"
+          >Aimen<span class="text-accent">.</span></a
+        >
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="index.html" class="nav-link-active">Home</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-1 px-6 pb-4 border-t border-white/10">
+        <li><a href="index.html" class="block py-2 nav-link-active">Home</a></li>
+        <li><a href="projects.html" class="block py-2 nav-link">Projects</a></li>
+        <li><a href="contact.html" class="block py-2 nav-link">Contact</a></li>
       </ul>
     </nav>
-    <div
-      class="flex-1 bg-gradient-to-b min-h-screen from-gray-800 to-black opacity-100">
-      <div class="mx-auto mt-12 text-center">
-        <!-- Circular image container -->
-        <div class="w-48 h-48 mx-auto overflow-hidden rounded-full">
-          <img
-            src="img/DSC_0212.JPG"
-            alt="Profile Picture"
-            class="object-cover w-full h-full" />
-        </div>
-        <h1 class="text-white text-6xl mt-8">I'm Aimen.</h1>
-        <h2 class="text-white text-2xl mt-4">A Software Developer.</h2>
-        <p class="text-gray-400 mt-4">
-          This portfolio showcases my development experience, methods, and
-          <br />
-          outcomes in crafting exceptional user interfaces.
-        </p>
-        <div class="mt-20">
+
+    <main id="main" class="flex-1">
+      <!-- Hero Section -->
+      <section
+        class="relative bg-gradient-to-b from-ink-900 to-ink-950 overflow-hidden">
+        <!-- subtle glow -->
+        <div
+          class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl"></div>
+
+        <div
+          class="relative max-w-4xl mx-auto px-6 py-24 md:py-32 text-center flex flex-col items-center">
+          <div
+            class="w-40 h-40 md:w-48 md:h-48 overflow-hidden rounded-full ring-4 ring-white/10 shadow-2xl animate-fade-in">
+            <img
+              src="img/DSC_0212.JPG"
+              alt="Portrait of Aimen Chaouli"
+              class="object-cover w-full h-full" />
+          </div>
+
+          <p
+            class="mt-8 text-accent font-medium tracking-widest uppercase text-sm animate-fade-up">
+            Software Developer
+          </p>
+          <h1
+            class="mt-3 text-5xl md:text-7xl font-extrabold tracking-tight animate-fade-up">
+            Hi, I'm Aimen.
+          </h1>
+          <p
+            class="mt-6 max-w-xl text-lg text-gray-400 leading-relaxed animate-fade-up">
+            I build scalable, user-centered web and desktop applications. This
+            portfolio showcases my development experience, methods, and outcomes
+            in crafting exceptional digital products.
+          </p>
+
+          <div
+            class="mt-10 flex flex-col sm:flex-row items-center gap-4 animate-fade-up">
+            <a href="projects.html" class="btn-primary">
+              View My Work
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <button id="resume-btn" class="btn-outline">
+              Download Resume
+              <i class="fa-solid fa-download text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Social links -->
+          <div class="mt-10 flex items-center gap-6 text-gray-400 animate-fade-up">
+            <a
+              href="https://github.com/aimen-chaouli"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub profile"
+              class="hover:text-accent transition-colors"
+              ><i class="fa-brands fa-github text-2xl"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/aimenchaouli"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn profile"
+              class="hover:text-accent transition-colors"
+              ><i class="fa-brands fa-linkedin text-2xl"></i
+            ></a>
+            <a
+              href="mailto:aimen.chaouli@outlook.com"
+              aria-label="Send email"
+              class="hover:text-accent transition-colors"
+              ><i class="fa-solid fa-envelope text-2xl"></i
+            ></a>
+          </div>
+
           <a
-            href="#work"
-            class="text-white border rounded-full py-4 px-6 inline-block mx-auto text-center"
-            id="showWork">
-            Show Work
+            href="#about"
+            aria-label="Scroll to about section"
+            class="mt-16 text-gray-500 hover:text-accent transition-colors animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
           </a>
         </div>
+      </section>
 
-        <script>
-          document
-            .querySelector('a[href="#work"]')
-            .addEventListener("click", function (event) {
-              event.preventDefault(); // Prevent default jump
-              document
-                .querySelector("#work")
-                .scrollIntoView({ behavior: "smooth" });
-            });
-        </script>
+      <!-- About Section -->
+      <section id="about" class="py-24 bg-white text-gray-900">
+        <div class="max-w-5xl mx-auto px-6">
+          <p
+            class="text-accent text-center font-semibold tracking-widest uppercase text-sm mb-3 reveal">
+            About
+          </p>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-6 reveal">
+            Value in the lives of others.
+          </h2>
+          <p
+            class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed reveal">
+            I am driven by a desire to improve the lives of others. My passion
+            lies in enhancing user experiences and leading projects towards
+            positive outcomes. I believe in a human-centered approach that
+            unlocks business value by providing genuine customer value.
+          </p>
 
-        <svg
-          class="w-6 h-6 mt-4 text-white mx-auto animate-bounce"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19 9l-7 7-7-7"></path>
-        </svg>
-      </div>
-    </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="reveal">
+              <div
+                class="w-12 h-12 rounded-xl bg-gray-900 text-accent flex items-center justify-center mb-4">
+                <i class="fa-solid fa-code text-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Work</h3>
+              <p class="text-gray-600 leading-relaxed">
+                I leverage code to build scalable and efficient solutions that
+                solve real-world problems. Writing clean, maintainable code is
+                essential to my work, and I thrive in collaborative environments
+                where ideas are shared, tested, and refined.
+              </p>
+            </div>
 
-    <!-- About Section -->
-    <section class="min-h-screen py-16 bg-white text-gray-900">
-      <div class="max-w-5xl mx-auto px-4">
-        <!-- Heading & Intro Text -->
-        <h2 class="text-4xl font-bold text-center mb-6">
-          Value in the lives of others.
-        </h2>
-        <p class="text-center text-lg text-gray-600 mb-10">
-          I am driven by a desire to improve the lives of others. My passion
-          lies in enhancing user experiences and leading projects towards
-          positive outcomes. I believe in a human-centered approach that unlocks
-          business value by providing genuine customer value.
-        </p>
+            <div class="reveal">
+              <div
+                class="w-12 h-12 rounded-xl bg-gray-900 text-accent flex items-center justify-center mb-4">
+                <i class="fa-solid fa-chess-knight text-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Strategy</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Development is more than writing code—it's about understanding
+                user needs, optimizing performance, and iterating based on
+                feedback. I believe in an agile approach where continuous
+                learning ensures we build solutions that truly enhance
+                experiences.
+              </p>
+            </div>
 
-        <!-- Three-Column Layout -->
-        <div
-          class="flex flex-col md:flex-row justify-center py-20 items-start text-center space-y-8 md:space-y-0 md:space-x-16">
-          <!-- Column 1 -->
-          <div class="md:w-1/3">
-            <h3 class="text-3xl text-left font-semibold mb-2">Work</h3>
-            <p class="text-gray-600 text-justify">
-              I am a software developer who leverages code to build scalable and
-              efficient solutions that solve real-world problems. Writing clean,
-              maintainable code is essential to my work, and I thrive in
-              collaborative environments where ideas are shared, tested, and
-              refined to achieve the best possible outcome.
-            </p>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="md:w-1/3">
-            <h3 class="text-3xl font-semibold text-left mb-2">Strategy</h3>
-            <p class="text-gray-600 text-justify">
-              Software development is more than just writing code—it’s about
-              understanding user needs, optimizing performance, and iterating
-              based on feedback. I believe in an agile approach, where
-              continuous learning, testing, and refining ensure we build
-              solutions that truly enhance user experiences.
-            </p>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="md:w-1/3">
-            <h3 class="text-3xl text-left font-semibold mb-2">Leadership</h3>
-            <p class="text-gray-600 text-justify">
-              Great leadership is about empowering others. I am committed to
-              mentoring and sharing knowledge, helping fellow developers unlock
-              their full potential. When we support and challenge each other, we
-              foster innovation and contribute to building better software
-              together.
-            </p>
+            <div class="reveal">
+              <div
+                class="w-12 h-12 rounded-xl bg-gray-900 text-accent flex items-center justify-center mb-4">
+                <i class="fa-solid fa-users text-lg"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Leadership</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Great leadership is about empowering others. I am committed to
+                mentoring and sharing knowledge, helping fellow developers
+                unlock their full potential. When we support and challenge each
+                other, we foster innovation.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Work Section -->
-
-    <section id="work" class="min-h-screen bg-black text-gray-400 pt-16 p-10">
-      <h2 class="text-4xl font-bold text-center mb-10">
-        I’ve worked as an
-        <span class="text-white">IT Engineer</span> and
-        <span class="text-white"> Network Administrator</span>
-        roles for:
-      </h2>
-
-      <div
-        class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-24 pt-16">
-        <!-- Work Items -->
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-start flex flex-col justify-between min-h-[300px]">
-          <img
-            src="img/epsp.png"
-            alt="Établissement Public de Santé Logo"
-            class="h-16 mx-auto mb-4" />
-          <h3 class="text-3xl font-semibold text-white text-center">
-            Établissement Public de Santé
-          </h3>
-          <p class="text-gray-400 pt-6 text-xl text-center">IT Engineer</p>
-          <p class="text-gray-500 mt-2 text-center">
-            Public Healthcare Institution
+      <!-- Work Experience Section -->
+      <section id="work" class="py-24 bg-ink-950">
+        <div class="max-w-5xl mx-auto px-6">
+          <p
+            class="text-accent text-center font-semibold tracking-widest uppercase text-sm mb-3 reveal">
+            Experience
           </p>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center text-white mb-16 reveal">
+            I've worked in
+            <span class="text-accent">IT Engineering</span> &amp;
+            <span class="text-accent">Network Administration</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="work-card reveal bg-ink-900 border border-white/5 p-8 rounded-2xl shadow-lg hover:border-accent/40 transition-colors">
+              <img
+                src="img/epsp.png"
+                alt="Établissement Public de Santé logo"
+                class="h-14 mb-6"
+                loading="lazy" />
+              <h3 class="text-2xl font-semibold text-white mb-1">
+                Établissement Public de Santé
+              </h3>
+              <p class="text-accent font-medium">IT Engineer</p>
+              <p class="text-gray-500 mt-2">Public Healthcare Institution</p>
+            </div>
+
+            <div
+              class="work-card reveal bg-ink-900 border border-white/5 p-8 rounded-2xl shadow-lg hover:border-accent/40 transition-colors">
+              <img
+                src="img/download.svg"
+                alt="Clinique Les Jasmins logo"
+                class="h-14 mb-6"
+                loading="lazy" />
+              <h3 class="text-2xl font-semibold text-white mb-1">
+                Clinique Les Jasmins
+              </h3>
+              <p class="text-accent font-medium">
+                IT Support &amp; Network Administrator · Apprenticeship
+              </p>
+              <p class="text-gray-500 mt-2">Private Healthcare Clinic</p>
+            </div>
+          </div>
+
+          <div class="text-center mt-16 reveal">
+            <a href="projects.html" class="btn-primary">
+              Explore My Projects
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div
-          class="bg-gray-900 p-10 rounded-xl shadow-lg w-full max-w-[350px] text-start flex flex-col justify-between min-h-[300px]">
-          <img
-            src="img/download.svg"
-            alt="Clinique Les Jasmins Logo"
-            class="h-16 mx-auto mb-4" />
-          <h3 class="text-3xl font-semibold text-white text-center">
-            Clinique Les Jasmins
-          </h3>
-          <p class="text-gray-400 pt-6 text-xl text-center">
-            IT Support and Network Administrator · Apprenticeship
-          </p>
-          <p class="text-gray-500 mt-2 text-center">
-            Private Healthcare Clinic
-          </p>
-        </div>
-      </div>
-    </section>
     <!-- Footer -->
-    <footer class="bg-black text-center py-4 text-gray-400">
-      &copy; 2026 Aimen Chaouli. All rights reserved.
+    <footer class="bg-ink-950 border-t border-white/10 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Aimen Chaouli. All rights reserved.
+        </p>
+        <div class="flex items-center gap-5 text-gray-500">
+          <a
+            href="https://github.com/aimen-chaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aimenchaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:aimen.chaouli@outlook.com"
+            aria-label="Email"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

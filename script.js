@@ -1,80 +1,98 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Toggle tasks functionality with GSAP animations
-  document.querySelectorAll(".toggle-tasks").forEach((toggleButton) => {
-    const tasksList = toggleButton.nextElementSibling; // Related tasks list
-    const toggleText = toggleButton.querySelector(".toggle-text"); // Text span
-    const arrowIcon = toggleButton.querySelector("i");
+const RESUME_URL =
+  "https://drive.google.com/file/d/1H67gsSPizUS6ilr0BzFZMu9VB8XTiMTo/view?usp=sharing";
 
-    toggleButton.addEventListener("click", function () {
-      // Animate the button (bounce effect)
-      gsap.fromTo(
-        toggleButton,
-        { scale: 0.95 },
-        { scale: 1, duration: 0.2, ease: "back.out(1.7)" }
-      );
-
-      // Check current state: if tasksList is hidden, then expand
-      if (tasksList.classList.contains("hidden")) {
-        // Remove the hidden class and animate opening the tasks list
-        tasksList.classList.remove("hidden");
-        gsap.fromTo(
-          tasksList,
-          { height: 0, opacity: 0 },
-          { height: "auto", opacity: 1, duration: 0.5, ease: "power2.out" }
-        );
-        toggleText.textContent = "Hide";
-        gsap.to(arrowIcon, {
-          rotation: 180,
-          duration: 0.5,
-          ease: "power2.out",
-        });
-        toggleButton.setAttribute("aria-expanded", "true");
-      } else {
-        // Animate collapse, then add the hidden class after animation
-        gsap.to(tasksList, {
-          height: 0,
-          opacity: 0,
-          duration: 0.5,
-          ease: "power2.in",
-          onComplete: () => {
-            tasksList.classList.add("hidden");
-          },
-        });
-        toggleText.textContent = "Read more";
-        gsap.to(arrowIcon, { rotation: 0, duration: 0.5, ease: "power2.in" });
-        toggleButton.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
-
-  // Register the ScrollTrigger plugin with GSAP
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Animate the work cards on scroll
-  gsap.from(".work-card", {
-    scrollTrigger: {
-      trigger: ".work-card", // Animate when a work card comes into view
-      start: "top 80%", // When top of card hits 80% of viewport height
-      toggleActions: "play none none none",
-      // markers: true,      // Uncomment to see markers for debugging
-    },
-    y: 50, // Start 50px lower
-    opacity: 0, // Start fully transparent
-    duration: 1, // Animation duration
-    stagger: 0.2, // Stagger animations for each card
-  });
-});
-
-function downloadPDF() {
-  // Replace with your actual FILE_ID from Google Drive
-  const fileID = "Resume";
-  const gdriveURL = `https://drive.google.com/file/d/1H67gsSPizUS6ilr0BzFZMu9VB8XTiMTo/view?usp=sharing`;
-
-  // Open link in a new tab
-  window.open(gdriveURL, "_blank");
-}
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
 
 document.addEventListener("DOMContentLoaded", () => {
+  initMobileMenu();
+  initResumeButtons();
+  initScrollReveal();
+  initCarousel();
+});
+
+/* -------------------------------------------------------------------------- */
+/* Mobile navigation menu                                                     */
+/* -------------------------------------------------------------------------- */
+function initMobileMenu() {
+  const toggle = document.querySelector("#menu-toggle");
+  const menu = document.querySelector("#mobile-menu");
+  if (!toggle || !menu) return;
+
+  const icon = toggle.querySelector("i");
+
+  const closeMenu = () => {
+    menu.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+    if (icon) icon.className = "fa-solid fa-bars text-xl";
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = !menu.classList.contains("hidden");
+    if (isOpen) {
+      closeMenu();
+    } else {
+      menu.classList.remove("hidden");
+      toggle.setAttribute("aria-expanded", "true");
+      if (icon) icon.className = "fa-solid fa-xmark text-xl";
+    }
+  });
+
+  // Close the menu when a link is tapped.
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close the menu when resizing up to desktop.
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/* Resume / CV buttons                                                        */
+/* -------------------------------------------------------------------------- */
+function initResumeButtons() {
+  document.querySelectorAll("#resume-btn, .resume-btn").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.open(RESUME_URL, "_blank", "noopener");
+    });
+  });
+}
+
+/* -------------------------------------------------------------------------- */
+/* Scroll reveal via IntersectionObserver                                     */
+/* -------------------------------------------------------------------------- */
+function initScrollReveal() {
+  const revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length === 0) return;
+
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+}
+
+/* -------------------------------------------------------------------------- */
+/* Project image carousel                                                     */
+/* -------------------------------------------------------------------------- */
+function initCarousel() {
   const carousel = document.querySelector("#carousel-section");
   if (!carousel) return;
 
@@ -84,27 +102,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextButton = carousel.querySelector(".carousel-button.next");
 
   if (!slidesContainer || !prevButton || !nextButton || slides.length === 0) {
-    console.error("Carousel elements not found.");
     return;
   }
 
   let currentIndex = 0;
   const totalSlides = slides.length;
 
-  function updateCarousel() {
-    const offset = -currentIndex * 100;
-    slidesContainer.style.transform = `translateX(${offset}%)`;
-  }
+  const update = () => {
+    slidesContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+  };
 
-  nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel();
+  const goTo = (index) => {
+    currentIndex = (index + totalSlides) % totalSlides;
+    update();
+  };
+
+  nextButton.addEventListener("click", () => goTo(currentIndex + 1));
+  prevButton.addEventListener("click", () => goTo(currentIndex - 1));
+
+  // Keyboard navigation when the carousel region has focus.
+  carousel.setAttribute("tabindex", "0");
+  carousel.setAttribute("role", "region");
+  carousel.setAttribute("aria-label", "Project screenshots");
+  carousel.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goTo(currentIndex + 1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goTo(currentIndex - 1);
+    }
   });
 
-  prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-  });
-
-  updateCarousel(); // Initialize
-});
+  update();
+}

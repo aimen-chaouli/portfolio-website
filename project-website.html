@@ -16,17 +16,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <title>The Clinic Website — Aimen Chaouli</title>
+    <meta
+      name="description"
+      content="Case study: a modern, responsive clinic website built with HTML5, JavaScript, MySQL, and Bootstrap by Aimen Chaouli." />
+    <meta name="author" content="Aimen Chaouli" />
+    <link rel="canonical" href="https://aimen-chaouli.com/project-website.html" />
 
-    <link rel="stylesheet" href="src/output.css" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="The Clinic Website — Aimen Chaouli" />
+    <meta property="og:image" content="https://aimen-chaouli.com/img/Website.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Project: The Clinic Website - Aimen Chaouli</title>
+    <link rel="icon" type="image/jpeg" href="img/DSC_0212.JPG" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,60 +36,73 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="src/output.css" />
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-50 font-inter text-gray-800">
-    <nav class="bg-black shadow-md">
-      <ul class="flex justify-center space-x-8 py-4">
-        <li>
-          <a
-            href="index.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Home</a
-          >
-        </li>
+  <body class="min-h-screen flex flex-col bg-ink-950 text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md"
+      >Skip to content</a
+    >
 
+    <nav
+      class="sticky top-0 z-40 bg-ink-950/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white"
+          >Aimen<span class="text-accent">.</span></a
+        >
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="projects.html" class="nav-link-active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-1 px-6 pb-4 border-t border-white/10">
+        <li><a href="index.html" class="block py-2 nav-link">Home</a></li>
         <li>
-          <a
-            href="contact.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Contact</a
-          >
+          <a href="projects.html" class="block py-2 nav-link-active">Projects</a>
         </li>
-        <li>
-          <a
-            href="projects.html"
-            class="text-white hover:text-gray-300 transition-colors duration-200"
-            >Projects</a
-          >
-        </li>
+        <li><a href="contact.html" class="block py-2 nav-link">Contact</a></li>
       </ul>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-4 py-12 sm:py-12 flex-grow w-full">
+    <main id="main" class="max-w-5xl mx-auto px-6 py-12 flex-grow w-full">
       <article>
+        <a
+          href="projects.html"
+          class="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-accent transition-colors mt-6 mb-8">
+          <i class="fa-solid fa-arrow-left text-xs"></i> Back to projects
+        </a>
         <h1
-          class="text-3xl sm:text-4xl text-center font-extrabold text-gray-900 mt-12 mb-20">
+          class="text-3xl sm:text-5xl text-center font-extrabold tracking-tight mt-6 mb-16">
           The Clinic Website
         </h1>
         <section
           id="carousel-section"
           class="mb-12 flex items-center justify-center gap-2 sm:gap-4">
           <button
-            class="carousel-button carousel-nav-button prev flex-shrink-0 bg-gray-300 hover:bg-gray-400 text-gray-600 hover:text-gray-900 border border-gray-300 shadow-sm p-3 rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-10 h-10">
-            <img
-              src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/chevron-left.svg"
-              alt="Previous"
-              class="w-14 h-14" />
+            aria-label="Previous slide"
+            class="carousel-button carousel-nav-button prev flex-shrink-0 bg-ink-900 hover:bg-accent text-white hover:text-ink-950 border border-white/10 shadow-sm rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-11 h-11">
+            <i class="fa-solid fa-chevron-left"></i>
           </button>
 
-          <div class="flex-grow overflow-hidden rounded-lg shadow-md">
+          <div class="flex-grow overflow-hidden rounded-2xl shadow-xl border border-white/10">
             <div
               class="carousel-slides flex transition-transform duration-500 ease-in-out">
               <div class="carousel-slide w-full flex-shrink-0">
@@ -136,20 +151,18 @@
           </div>
 
           <button
-            class="carousel-button carousel-nav-button next flex-shrink-0 bg-gray-300 hover:bg-gray-400 text-gray-600 hover:text-gray-900 border border-gray-300 shadow-sm p-3 rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-10 h-10">
-            <img
-              src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/chevron-right.svg"
-              alt="Next"
-              class="w-5 h-5" />
+            aria-label="Next slide"
+            class="carousel-button carousel-nav-button next flex-shrink-0 bg-ink-900 hover:bg-accent text-white hover:text-ink-950 border border-white/10 shadow-sm rounded-full cursor-pointer transition-colors duration-300 flex items-center justify-center w-11 h-11">
+            <i class="fa-solid fa-chevron-right"></i>
           </button>
         </section>
 
-        <section class="mb-12 mt-24">
+        <section class="mb-12 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Project Overview
           </h2>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-400 leading-relaxed">
             This project involved the development of a modern, responsive clinic
             website to enhance the clinic’s online presence. The website
             features intuitive navigation, detailed service information, and a
@@ -159,37 +172,37 @@
           </p>
         </section>
 
-        <section class="mb-12 mt-24">
+        <section class="mb-12 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Technologies Used
           </h2>
           <div class="flex flex-wrap gap-2">
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-blue-100 text-blue-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >HTML5</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-yellow-100 text-yellow-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >JavaScript</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-orange-100 text-orange-800"
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
               >MySQL</span
             >
             <span
-              class="text-xs font-medium px-3 py-1 rounded-md bg-red-100 text-red-800"
-              >BootStrap</span
+              class="text-sm font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-300"
+              >Bootstrap</span
             >
           </div>
         </section>
 
-        <section class="mb-2 mt-24">
+        <section class="mb-4 mt-20">
           <h2
-            class="text-2xl font-semibold text-gray-700 mb-4 border-b border-gray-200 pb-2">
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
             Key Features
           </h2>
-          <ul class="list-disc pl-6 space-y-2 text-gray-600 leading-relaxed">
+          <ul class="list-disc pl-6 space-y-2 text-gray-400 leading-relaxed">
             <li>
               Intuitive Navigation – A user-friendly design ensures easy access
               to important clinic details.
@@ -212,11 +225,119 @@
             </li>
           </ul>
         </section>
+
+        <section class="mb-4 mt-20">
+          <h2
+            class="text-2xl font-semibold text-white mb-4 border-b border-white/10 pb-3">
+            Challenges &amp; Solutions
+          </h2>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            Building a clinic website sounds straightforward until you realize a
+            medical site has to be trustworthy, fast, and secure for non-technical
+            visitors who are often stressed and just want an answer. These were
+            the moments that taught me the most.
+          </p>
+
+          <div class="space-y-6">
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Stopping spam and injection on the contact form
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                The contact form was the one place where the outside world could
+                write into the clinic&rsquo;s database, and within days of going
+                live it started collecting junk submissions and suspicious input.
+                <span class="text-gray-300"
+                  >I hardened it on two fronts: every field is validated and
+                  sanitized on the server before it&rsquo;s ever touched, and all
+                  database writes go through parameterized (prepared) statements
+                  so a crafted message can never break out of its query.</span
+                >
+                The result was a contact channel I could actually trust &mdash;
+                no SQL injection surface, and the noise dropped to nearly zero.
+                It was the project where &ldquo;never trust user input&rdquo;
+                stopped being a slogan and became a habit.
+              </p>
+            </div>
+
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Making one layout feel right on every screen
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Early on the site looked great on my laptop and fell apart on a
+                phone &mdash; the navigation overflowed and service cards
+                stacked awkwardly. Rather than patch each breakpoint by hand, I
+                rebuilt the layout mobile-first with Bootstrap&rsquo;s grid and
+                tested against real device widths.
+                <span class="text-gray-300"
+                  >By designing for the smallest screen first and letting the
+                  layout grow upward, the same markup now reads cleanly from a
+                  narrow phone to a wide desktop without duplicated
+                  code.</span
+                >
+                It changed how I approach every interface now: start with the
+                constraint, not the comfortable case.
+              </p>
+            </div>
+
+            <div
+              class="bg-ink-900 border border-white/5 rounded-2xl p-6 hover:border-accent/40 transition-colors">
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Keeping the site fast for patients on slow connections
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Clinic visitors aren&rsquo;t always on fast Wi-Fi, and the first
+                version felt heavy on mobile data. I went through the page weight
+                line by line &mdash; compressing and properly sizing images,
+                deferring non-critical scripts, and trimming unused styles.
+                <span class="text-gray-300"
+                  >The payoff was a noticeably quicker first load, which matters
+                  most for someone trying to find a phone number or opening
+                  hours in a hurry.</span
+                >
+                Performance stopped being an afterthought and became part of how
+                I judge whether a page is actually &ldquo;done.&rdquo;
+              </p>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
 
-    <footer class="bg-black text-center py-6 text-gray-400 text-sm">
-      © 2026 Aimen Chaouli. All rights reserved.
+    <footer class="bg-ink-950 border-t border-white/10 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Aimen Chaouli. All rights reserved.
+        </p>
+        <div class="flex items-center gap-5 text-gray-500">
+          <a
+            href="https://github.com/aimen-chaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aimenchaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:aimen.chaouli@outlook.com"
+            aria-label="Email"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>

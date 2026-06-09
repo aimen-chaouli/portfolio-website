@@ -12,8 +12,34 @@
       gtag("js", new Date());
       gtag("config", "G-Z2BS6ZRB7T");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Projects — Aimen Chaouli</title>
+    <meta
+      name="description"
+      content="A curated collection of Aimen Chaouli's software projects, including web applications, POS systems, and inventory management tools." />
+    <meta name="author" content="Aimen Chaouli" />
+    <link rel="canonical" href="https://aimen-chaouli.com/projects.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aimen-chaouli.com/projects.html" />
+    <meta property="og:title" content="Projects — Aimen Chaouli" />
+    <meta
+      property="og:description"
+      content="A curated collection of software projects by Aimen Chaouli." />
+    <meta property="og:image" content="https://aimen-chaouli.com/img/Website.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/jpeg" href="img/DSC_0212.JPG" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
@@ -22,358 +48,348 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="src/output.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-    <title>Projects - Aimen Chaouli</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
-      body {
-        font-family: "Inter", sans-serif;
-        background-color: #fafafa; /* Very soft off-white */
-      }
-    </style>
   </head>
-  <body class="min-h-screen flex flex-col text-slate-800 antialiased">
-    <nav class="bg-black shadow-md">
-      <ul class="flex justify-center space-x-8 py-4">
-        <li>
-          <a
-            href="index.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Home</a
-          >
-        </li>
+  <body class="min-h-screen flex flex-col bg-ink-950 text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded-md"
+      >Skip to content</a
+    >
 
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-40 bg-ink-950/80 backdrop-blur-md border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+        <a href="index.html" class="text-lg font-bold tracking-tight text-white"
+          >Aimen<span class="text-accent">.</span></a
+        >
+        <ul class="hidden md:flex items-center space-x-8">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="projects.html" class="nav-link-active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+      <ul
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-1 px-6 pb-4 border-t border-white/10">
+        <li><a href="index.html" class="block py-2 nav-link">Home</a></li>
         <li>
-          <a
-            href="contact.html"
-            class="text-gray-400 hover:text-white transition-colors duration-200"
-            >Contact</a
-          >
+          <a href="projects.html" class="block py-2 nav-link-active">Projects</a>
         </li>
-        <li>
-          <a
-            href="projects.html"
-            class="text-white hover:text-gray-300 transition-colors duration-200"
-            >Projects</a
-          >
-        </li>
+        <li><a href="contact.html" class="block py-2 nav-link">Contact</a></li>
       </ul>
     </nav>
 
-    <header class="pt-24 pb-16 px-6 max-w-3xl mx-auto text-center">
-      <h1
-        class="text-4xl md:text-5xl font-light tracking-tight text-slate-900 mb-6">
-        Selected Works
-      </h1>
-      <p class="text-lg text-slate-500 font-light leading-relaxed">
-        A curated collection of my recent digital projects, focusing on clean
-        code and intuitive user experiences.
-      </p>
-    </header>
+    <main id="main" class="flex-1">
+      <header class="pt-20 pb-12 px-6 max-w-3xl mx-auto text-center">
+        <p
+          class="text-accent font-semibold tracking-widest uppercase text-sm mb-3">
+          Portfolio
+        </p>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+          Selected Works
+        </h1>
+        <p class="text-lg text-gray-400 leading-relaxed">
+          A curated collection of my recent projects, focusing on clean code and
+          intuitive user experiences.
+        </p>
+      </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 flex-grow w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
-        <article class="group cursor-pointer flex flex-col">
-          <div
-            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 mb-6">
-            <img
-              src="img/Website.png"
-              alt="The Clinic Website"
-              class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" />
-          </div>
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="text-xl font-medium text-slate-900 mb-2">
-                The Clinic Website
+      <section class="max-w-6xl mx-auto px-6 py-8 w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project Card Template -->
+          <a
+            href="project-website.html"
+            class="group reveal flex flex-col bg-ink-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-ink-800">
+              <img
+                src="img/Website.png"
+                alt="The Clinic Website project preview"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div class="p-6 flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  The Clinic Website
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                  A modern, responsive clinic website featuring intuitive
+                  navigation and comprehensive service details for optimal
+                  patient access.
+                </p>
+                <p
+                  class="mt-3 flex items-center gap-2 text-xs text-accent/90 font-medium">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  Hardened the contact form against spam and SQL injection.
+                </p>
+              </div>
+              <span
+                class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-gray-400 group-hover:bg-accent group-hover:text-ink-950 group-hover:border-accent transition-all duration-300">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform group-hover:-rotate-45"></i>
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="project-absence.html"
+            class="group reveal flex flex-col bg-ink-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-ink-800">
+              <img
+                src="img/absenceDSS.png"
+                alt="Staff Coverage System project preview"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div class="p-6 flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  Staff Coverage System
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                  A dynamic platform for tracking clinic staff absences, ensuring
+                  continuous service coverage with automated weekly reporting.
+                </p>
+                <p
+                  class="mt-3 flex items-center gap-2 text-xs text-accent/90 font-medium">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  Built data-layer rules to block impossible coverage clashes.
+                </p>
+              </div>
+              <span
+                class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-gray-400 group-hover:bg-accent group-hover:text-ink-950 group-hover:border-accent transition-all duration-300">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform group-hover:-rotate-45"></i>
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="project-pos.html"
+            class="group reveal flex flex-col bg-ink-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-ink-800">
+              <img
+                src="img/pos.png"
+                alt="Point of Sale System project preview"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div class="p-6 flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  POS System
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                  A Flutter and Node.js retail desktop application using Prisma
+                  and PostgreSQL to ensure secure, real-time data
+                  synchronization.
+                </p>
+                <p
+                  class="mt-3 flex items-center gap-2 text-xs text-accent/90 font-medium">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  Used atomic transactions to keep stock accurate under
+                  concurrent sales.
+                </p>
+              </div>
+              <span
+                class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-gray-400 group-hover:bg-accent group-hover:text-ink-950 group-hover:border-accent transition-all duration-300">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform group-hover:-rotate-45"></i>
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="project-inventory.html"
+            class="group reveal flex flex-col bg-ink-900 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-ink-800">
+              <img
+                src="img/inventory-dfm.png"
+                alt="Financial Inventory Management project preview"
+                loading="lazy"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            </div>
+            <div class="p-6 flex justify-between items-start gap-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                  Inventory Management
+                </h3>
+                <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                  A dedicated desktop application for the financial department to
+                  track and manage purchases of IT assets, medical equipment, and
+                  office supplies.
+                </p>
+                <p
+                  class="mt-3 flex items-center gap-2 text-xs text-accent/90 font-medium">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  Designed one schema to model wildly different asset types.
+                </p>
+              </div>
+              <span
+                class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-gray-400 group-hover:bg-accent group-hover:text-ink-950 group-hover:border-accent transition-all duration-300">
+                <i
+                  class="fa-solid fa-arrow-right text-sm transition-transform group-hover:-rotate-45"></i>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Toolkit Section -->
+      <section class="w-full border-t border-white/10 py-20 mt-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <p
+            class="text-accent font-semibold tracking-widest uppercase text-sm mb-3 reveal">
+            Skills
+          </p>
+          <h2 class="text-2xl md:text-3xl font-bold mb-12 reveal">
+            Toolkit &amp; Technologies
+          </h2>
+
+          <div class="space-y-12">
+            <div class="reveal">
+              <h3
+                class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-6">
+                Frontend
               </h3>
-              <p
-                class="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
-                A modern, responsive clinic website featuring intuitive
-                navigation and comprehensive service details for optimal patient
-                access.
-              </p>
+              <div class="flex flex-wrap justify-center gap-3">
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-html5-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">HTML5</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-css3-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">CSS3</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-javascript-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">JavaScript</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-tailwindcss-original colored text-lg"></i
+                  ><span class="text-sm font-medium">Tailwind</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-vuejs-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Vue.js</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-bootstrap-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Bootstrap</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-flutter-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Flutter</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-dart-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Dart</span>
+                </div>
+              </div>
             </div>
-            <a
-              href="project-website.html"
-              class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
-              <svg
-                class="w-4 h-4 transition-transform group-hover:-rotate-45"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </article>
 
-        <article class="group cursor-pointer flex flex-col">
-          <div
-            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 mb-6">
-            <img
-              src="img/Pharmacy.png"
-              alt="Pharmacy Management System"
-              class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" />
-          </div>
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="text-xl font-medium text-slate-900 mb-2">
-                Pharmacy Management
+            <div class="reveal">
+              <h3
+                class="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-6">
+                Backend &amp; Database
               </h3>
-              <p
-                class="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
-                A cutting-edge web application designed to streamline pharmacy
-                operations, featuring real-time inventory tracking and robust
-                security.
-              </p>
-            </div>
-            <a
-              href="#"
-              class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
-              <svg
-                class="w-4 h-4 transition-transform group-hover:-rotate-45"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="group cursor-pointer flex flex-col">
-          <div
-            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 mb-6">
-            <img
-              src="img/absenceDSS.png"
-              alt="Absence Management System"
-              class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" />
-          </div>
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="text-xl font-medium text-slate-900 mb-2">
-                Staff Coverage System
-              </h3>
-              <p
-                class="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
-                A dynamic platform for tracking clinic staff absences, ensuring
-                continuous service coverage with automated weekly reporting.
-              </p>
-            </div>
-            <a
-              href="project-absence.html"
-              class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
-              <svg
-                class="w-4 h-4 transition-transform group-hover:-rotate-45"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="group cursor-pointer flex flex-col">
-          <div
-            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 mb-6">
-            <img
-              src="img/pos.png"
-              alt="Point of Sale System"
-              class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" />
-          </div>
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="text-xl font-medium text-slate-900 mb-2">
-                POS System
-              </h3>
-              <p
-                class="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
-                A Flutter and Node.js-based retail Desktop application using
-                Prisma and PostgreSQL to ensure secure, real-time data
-                synchronization.
-              </p>
-            </div>
-            <a
-              href="project-pos.html"
-              class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
-              <svg
-                class="w-4 h-4 transition-transform group-hover:-rotate-45"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </article>
-        <article class="group cursor-pointer flex flex-col">
-          <div
-            class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 mb-6">
-            <img
-              src="img/inventory-dfm.png"
-              alt="Financial Inventory Management"
-              class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105" />
-          </div>
-          <div class="flex justify-between items-start gap-4">
-            <div>
-              <h3 class="text-xl font-medium text-slate-900 mb-2">
-                Inventory Management
-              </h3>
-              <p
-                class="text-slate-500 text-sm font-light leading-relaxed line-clamp-2">
-                A dedicated desktop application for the financial department to
-                track and manage purchases of IT assets, medical equipment, and
-                office supplies.
-              </p>
-            </div>
-            <a
-              href="project-inventory.html"
-              class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-400 group-hover:bg-slate-900 group-hover:text-white group-hover:border-slate-900 transition-all duration-300">
-              <svg
-                class="w-4 h-4 transition-transform group-hover:-rotate-45"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="w-full bg-white border-t border-slate-100 py-24 mt-12">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-2xl font-light tracking-tight text-slate-900 mb-12">
-          Toolkit & Technologies
-        </h2>
-
-        <div class="space-y-12">
-          <div>
-            <h3
-              class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
-              Frontend
-            </h3>
-            <div class="flex flex-wrap justify-center gap-3">
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-html5-plain colored text-lg"></i
-                ><span class="text-sm font-medium">HTML5</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-css3-plain colored text-lg"></i
-                ><span class="text-sm font-medium">CSS3</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-javascript-plain colored text-lg"></i
-                ><span class="text-sm font-medium">JavaScript</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-tailwindcss-original colored text-lg"></i
-                ><span class="text-sm font-medium">Tailwind</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-vuejs-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Vue.js</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-bootstrap-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Bootstrap</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-flutter-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Flutter</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-dart-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Dart</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3
-              class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
-              Backend & Database
-            </h3>
-            <div class="flex flex-wrap justify-center gap-3">
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-nodejs-plain-wordmark colored text-lg"></i
-                ><span class="text-sm font-medium">Node.js</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-express-original colored text-lg"></i
-                ><span class="text-sm font-medium">Express.js</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-django-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Django</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-php-plain colored text-lg"></i
-                ><span class="text-sm font-medium">PHP</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-mysql-original colored text-lg"></i
-                ><span class="text-sm font-medium">MySQL</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-prisma-original colored text-lg"></i
-                ><span class="text-sm font-medium">Prisma</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-sequelize-plain colored text-lg"></i
-                ><span class="text-sm font-medium">Sequelize</span>
-              </div>
-              <div
-                class="flex items-center space-x-2 px-4 py-2 rounded-full border border-slate-200 text-slate-600 hover:border-slate-400 hover:bg-slate-50 transition-colors">
-                <i class="devicon-postgresql-plain colored text-lg"></i
-                ><span class="text-sm font-medium">PostgreSQL</span>
+              <div class="flex flex-wrap justify-center gap-3">
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-nodejs-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Node.js</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-express-original colored text-lg"></i
+                  ><span class="text-sm font-medium">Express.js</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-django-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Django</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-php-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">PHP</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-mysql-original colored text-lg"></i
+                  ><span class="text-sm font-medium">MySQL</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-prisma-original colored text-lg"></i
+                  ><span class="text-sm font-medium">Prisma</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-sequelize-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">Sequelize</span>
+                </div>
+                <div
+                  class="flex items-center space-x-2 px-4 py-2 rounded-full border border-white/10 text-gray-300 hover:border-accent/50 hover:bg-white/5 transition-colors">
+                  <i class="devicon-postgresql-plain colored text-lg"></i
+                  ><span class="text-sm font-medium">PostgreSQL</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <footer class="bg-black text-center py-6 text-gray-400 text-sm">
-      © 2026 Aimen Chaouli. All rights reserved.
+    <footer class="bg-ink-950 border-t border-white/10 py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 Aimen Chaouli. All rights reserved.
+        </p>
+        <div class="flex items-center gap-5 text-gray-500">
+          <a
+            href="https://github.com/aimen-chaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/aimenchaouli"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:aimen.chaouli@outlook.com"
+            aria-label="Email"
+            class="hover:text-accent transition-colors"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
